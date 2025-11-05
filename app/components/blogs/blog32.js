@@ -12,14 +12,17 @@ const Blog32 = () => {
   // Table of contents data
   const tocItems = [
     { id: "tldr", title: "TL;DR" },
-    { id: "intro", title: "Introduction" },
-    { id: "what-is", title: "What is Computer Vision?" },
-    { id: "how-works", title: "How Does Computer Vision Work?" },
-    { id: "applications", title: "Applications of Computer Vision" },
-    { id: "challenges", title: "Challenges in Computer Vision" },
-    { id: "future", title: "Future of Computer Vision" },
+    { id: "what-is", title: "What Is Computer Vision?" },
+    { id: "how-works", title: "How Computer Vision Works" },
+    { id: "data-collection", title: "Data Collection" },
+    { id: "preprocessing", title: "Preprocessing" },
+    { id: "model-selection", title: "Model Selection" },
+    { id: "model-training", title: "Model Training" },
+    { id: "cv-tasks", title: "Computer Vision Tasks" },
+    { id: "applications", title: "Computer Vision Applications" },
+    { id: "tools", title: "Computer Vision Tools" },
+    { id: "history", title: "A Brief History" },
     { id: "conclusion", title: "Conclusion" },
-    { id: "faq", title: "FAQ" },
   ];
 
   // Smooth scroll to section
@@ -150,237 +153,326 @@ const Blog32 = () => {
           </div>
 
           {/* SECTION: TL;DR */}
-          <section id="tldr" className="scroll-mt-24">
+          <section id="tldr" className="scroll-mt-24 mb-10">
             <h2 className="text-2xl font-bold text-white mb-4">TL;DR</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              Computer vision is a field of AI that teaches machines to "see" and interpret visual data like images and videos. It works through steps such as image acquisition, preprocessing, feature extraction, and model training—powered by deep learning models like CNNs.
+              Computer vision enables machines to understand images and videos using machine learning algorithms. The workflow involves data collection, preprocessing, model selection, and training. CNNs extract features through convolution and pooling layers, while transformers are gaining popularity for image tasks.
             </p>
             <p className="text-white/80 leading-relaxed mb-4">
-              In real life, it powers facial recognition, self-driving cars, medical imaging, retail automation, and industrial quality checks.
-            </p>
-            <p className="text-white/80 leading-relaxed mb-10">
-              While computer vision faces challenges like data dependency, ethical concerns, and deployment issues, its future looks bright with edge AI, AR/VR, smart cities, and healthcare innovations leading the way. In short: computer vision is shaping how machines interact with the world—making them not just smart, but truly "visual."
+              Computer vision powers numerous applications from medical diagnosis and autonomous vehicles to retail automation and robotics. Popular tools include TensorFlow, PyTorch, OpenCV, and Keras. As data quality and models improve, vision systems continue to become more accurate and widespread in daily life.
             </p>
           </section>
 
-          {/* SECTION: Introduction */}
-          <section id="intro" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Introduction</h2>
+          {/* SECTION: What Is Computer Vision? */}
+          <section id="what-is" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">1. What Is Computer Vision?</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              Computer vision is a branch of artificial intelligence that allows machines to understand images and videos. It powers tools such as facial recognition, self-driving cars, and medical imaging. Humans can recognize objects instantly, but teaching machines to see requires advanced algorithms and large datasets.
-            </p>
-            <p className="text-white/80 leading-relaxed mb-10">
-              Today, computer vision is not just research. It is transforming healthcare, retail, and security while shaping the future of technology and the way people interact with machines.
+              Computer vision is an area of AI that enables machines to visually understand images and videos, using machine learning algorithms that find insightful information in visual data. In summary, this is at least a three-tier process: what is in it (recognition), what does the 3D shape look like, and how do the things relate to each other.
             </p>
           </section>
 
-          {/* SECTION: What is Computer Vision? */}
-          <section id="what-is" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">What is Computer Vision?</h2>
+          {/* SECTION: How Computer Vision Works */}
+          <section id="how-works" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">2. How Computer Vision Works</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              Computer vision is a field of AI that focuses on enabling computers to "see" and interpret visual input. This doesn't mean literal vision but the ability to analyze pixels, shapes, and patterns to extract meaning from images or videos.
+              A common example is the detection of pneumonia using chest X-rays. The reading of X-rays is usually slow and at times difficult for doctors since signs are subtle. In this case, a computer vision system may assist by learning from many labeled X-rays and proposing likely diagnoses.
             </p>
+            <p className="text-white/80 leading-relaxed mb-4">Typical workflow:</p>
+            <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20 mb-4">
+              <ol className="space-y-2 text-white/80">
+                <li>1. Data collection</li>
+                <li>2. Preprocessing</li>
+                <li>3. Model selection</li>
+                <li>4. Model training</li>
+              </ol>
+            </div>
+          </section>
+
+          {/* SECTION: Data Collection */}
+          <section id="data-collection" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">3. Data Collection</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              It differs from image processing, which mainly enhances images (e.g., improving brightness, filtering noise). Computer vision goes further—it interprets those images to make decisions, like identifying a stop sign or diagnosing a tumor.
-            </p>
-            <p className="text-white/80 leading-relaxed mb-10">
-              A simple example: when a human sees a dog, the brain identifies its shape, fur, and features, then concludes, "This is a dog." A computer vision system achieves the same through mathematical models trained on thousands or millions of dog images. The system then generalizes to recognize new, unseen examples.
+              First you collect images or video for the task. For medical tasks, hospitals can use past X-rays labeled as "normal" or "pneumonia". For other problems you might use camera or sensor feeds. Public datasets such as COCO, ImageNet and Open Images also help, providing many labeled images to train models.
             </p>
           </section>
 
-          {/* SECTION: How Does Computer Vision Work? */}
-          <section id="how-works" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">How Does Computer Vision Work?</h2>
-            <p className="text-white/80 leading-relaxed mb-4">The process of computer vision can be broken into four main stages:</p>
-            
+          {/* SECTION: Preprocessing */}
+          <section id="preprocessing" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">4. Preprocessing</h2>
+            <p className="text-white/80 leading-relaxed mb-4">
+              Models are as good as the data they're trained on. Preprocessing sanitizes and perfects images—say, changing brightness, resizing, smoothing, or removing noise. The datasets need to be large and diverse, so the models generalize well.
+            </p>
+            <p className="text-white/80 leading-relaxed mb-4">
+              You can increase size and variety through a technique called data augmentation: rotate, flip, crop, and change contrast. In medical imaging, simple transforms—like small rotations—help the model learn the same condition from slightly different angles.
+            </p>
+          </section>
+
+          {/* SECTION: Model Selection */}
+          <section id="model-selection" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">5. Model Selection</h2>
+            <p className="text-white/80 leading-relaxed mb-4">
+              Choosing the right model affects both speed and accuracy. CNNs are still widely used for image tasks, but RNNs help when image frames are sequential, like in video. Recently, transformer-based models (especially ViT) have become popular. They divide an image into patches, treat them like tokens, and apply a self-attention mechanism across patches. They often match or beat CNNs on tasks such as image classification.
+            </p>
+          </section>
+
+          {/* SECTION: Model Training */}
+          <section id="model-training" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">6. Model Training</h2>
+            <p className="text-white/80 leading-relaxed mb-4">
+              Training includes running the selected model on labeled data, estimating the errors, and tuning the parameters for better performance. A typical CNN consists of convolution layers that enable feature extraction, pooling layers to reduce size, and fully connected layers that enable final classification.
+            </p>
+
             <div className="space-y-4 mb-6">
               <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">1. Image Acquisition</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-2">Feature Extraction</h3>
                 <p className="text-white/80 leading-relaxed">
-                  Data is collected from cameras, sensors, or video feeds. For example, an autonomous car uses multiple cameras to capture the environment.
+                  Filters or kernels slide over the image, performing dot products with pixel values to produce feature maps. Each filter would respond to patterns such as edges, shapes, or textures. For X-rays, these could be cloudy areas, fluid pockets, or irregular contours of the lungs.
                 </p>
               </div>
 
               <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">2. Preprocessing</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-2">Pooling</h3>
                 <p className="text-white/80 leading-relaxed">
-                  Images are enhanced to remove noise, adjust contrast, or resize. This step ensures that the input data is consistent for further analysis.
+                  After convolution, pooling reduces the size of the feature map by taking maximum or average values in regions. This retains the most salient signals and reduces computation.
                 </p>
               </div>
 
               <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">3. Feature Extraction</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-2">Forward Pass and Loss</h3>
                 <p className="text-white/80 leading-relaxed">
-                  Algorithms detect edges, textures, or patterns. Modern deep learning approaches automatically learn these features instead of relying on hand-designed methods.
+                  The model predicts outputs in a forward pass. A loss function measures the error between prediction and true label.
                 </p>
               </div>
 
               <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">4. Model Training and Inference</h3>
+                <h3 className="text-lg font-semibold text-secondary mb-2">Backpropagation and Optimization</h3>
                 <p className="text-white/80 leading-relaxed">
-                  Machine learning models, often Convolutional Neural Networks (CNNs), are trained to recognize objects, faces, or actions. Once trained, they can analyze new images and predict outcomes.
+                  Backpropagation computes the gradients of the loss w.r.t. each weight. Optimizers such as gradient descent update the weights with the goal of reducing the loss over time.
+                </p>
+              </div>
+
+              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+                <h3 className="text-lg font-semibold text-secondary mb-2">Final Output</h3>
+                <p className="text-white/80 leading-relaxed">
+                  The fully connected layer provides class probabilities. For a chest X-ray, it could give the probability of pneumonia; if above a certain threshold, it flags the image for review.
                 </p>
               </div>
             </div>
+          </section>
 
-            <p className="text-white/80 leading-relaxed mb-10">
-              A CNN, for example, processes an image layer by layer—first identifying low-level features like edges, then shapes, and finally complex objects like faces or cars. This layered approach mimics how the human visual cortex processes visual information.
+          {/* SECTION: Computer Vision Tasks */}
+          <section id="cv-tasks" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">7. Computer Vision Tasks</h2>
+            <p className="text-white/80 leading-relaxed mb-4">
+              Different tasks that involve computer vision include:
             </p>
+
+            <div className="space-y-6 mb-6">
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Image Recognition</h3>
+                <p className="text-white/80 leading-relaxed">
+                  That is the broad idea of finding and naming objects, people, places or text in an image. It underlies many other tasks like classification and detection.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Image Classification</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Classification assigns a label either to the entire image or to objects within it. The pneumonia X-ray example is a classic example of image classification; the model decides whether an X-ray shows pneumonia or not.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Object Detection</h3>
+                <p className="text-white/80 leading-relaxed mb-2">
+                  Object detection finds where the objects are in an image and labels them; it combines localization—which is drawing bounding boxes—with classification. Examples include traffic footage systems that can detect and locate cars, bikes, and pedestrians.
+                </p>
+                <p className="text-white/80 leading-relaxed">
+                  The popular models for detection include the R-CNN (two-stage detector) and YOLO (single-stage, real-time detector). For video detection, transformer models are often mixed with RNNs to handle time sequences, such as LSTMs.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Image Segmentation</h3>
+                <p className="text-white/80 leading-relaxed mb-2">
+                  Segmentation labels each pixel in the image. It gives finer detail than detection by drawing exact shapes and boundaries. Types include:
+                </p>
+                <ul className="list-disc ml-6 text-white/80 space-y-1 mb-2">
+                  <li>Semantic segmentation: label each pixel with a class, not distinguishing instances (e.g., "road," "car")</li>
+                  <li>Instance segmentation: Label pixels for each object instance separately</li>
+                  <li>Panoptic segmentation: This combines semantic and instance segmentation to provide a full view of the scene</li>
+                </ul>
+                <p className="text-white/80 leading-relaxed">
+                  Segmentation is useful when objects are fragmented or exacting boundaries are important, to identify organ shapes in medical images.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Object Tracking</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Tracking involves establishing feature correspondence between object identities across video frames. Applications include surveillance, sports analytics, and driver-assist systems.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Scene Understanding</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Scene understanding goes beyond the identification of objects; it infers relations and events. Graph neural networks model spatial relationships between objects, such as a car in front of a taxi. VLMs combine image understanding with text to describe scenes in context.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Facial Recognition</h3>
+                <p className="text-white/80 leading-relaxed">
+                  It analyzes facial geometry and patterns of the face, including eye distance, the shape of the nose, and the jawline to identify individuals. Facial recognition is used in the unlocking of devices and in security systems.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Pose Estimation</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Estimating pose provides the position of body parts with respect to body gestures and motion. Applications include sports analysis, gaming, and robot operation, for example, by keeping a robotic arm in proper alignment with objects in space.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Optical Character Recognition (OCR)</h3>
+                <p className="text-white/80 leading-relaxed">
+                  OCR extracts text from scanned pages or images and converts it into machine-readable text. Image acquisition commonly takes place along with preprocessing like deskewing, and character or word recognition. Modern CNNs and transformers increase accuracy in character and word recognition for OCR.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Image Generation</h3>
+                <p className="text-white/80 leading-relaxed mb-2">
+                  Generative models create new images. Common types are:
+                </p>
+                <ul className="list-disc ml-6 text-white/80 space-y-1 mb-2">
+                  <li>Diffusion models: learn to remove noise from images to generate new samples</li>
+                  <li>GANs: These consist of a generative adversarial network where a generator creates images and a discriminator tries to tell real from fake. They train together</li>
+                  <li>Variational autoencoders: compress and reconstruct images to produce variations</li>
+                </ul>
+                <p className="text-white/80 leading-relaxed">
+                  These models can also generate images from text descriptions.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Visual Inspection</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Computer vision inspects items for defects, spots corrosion, or finds faulty parts in manufacturing and infrastructure. It helps detect issues with much greater precision and speed through segmentation and detection.
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* SECTION: Applications */}
-          <section id="applications" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Applications of Computer Vision</h2>
-            <p className="text-white/80 leading-relaxed mb-4">
-              Computer vision is applied across many industries, often in ways people interact with daily without realizing it.
-            </p>
+          <section id="applications" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">8. Computer Vision Applications</h2>
+            <p className="text-white/80 leading-relaxed mb-4">Practical applications include:</p>
 
-            <div className="space-y-6 mb-10">
+            <div className="space-y-6 mb-6">
               <div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">1. Healthcare</h3>
-                <ul className="list-disc ml-6 text-white/80 space-y-1">
-                  <li>Medical imaging systems detect anomalies in X-rays, MRIs, or CT scans.</li>
-                  <li>Early diagnosis tools help doctors identify conditions like cancer, strokes, or eye diseases.</li>
-                  <li>Surgical robots use vision to assist with precision procedures.</li>
-                </ul>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Agriculture</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Drones and cameras capture images of crops. Vision models analyze plant health, spot pests, and guide targeted treatments.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">2. Automotive</h3>
-                <ul className="list-disc ml-6 text-white/80 space-y-1">
-                  <li>Self-driving cars rely heavily on computer vision to detect pedestrians, traffic lights, and road signs.</li>
-                  <li>Advanced driver-assistance systems (ADAS) warn drivers of obstacles or help maintain lanes.</li>
-                </ul>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Autonomous Vehicles</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Self-driving cars combine cameras with lidar, radar, and sensors. The entire vision tasks of detection, segmentation, and scene understanding assist the car to navigate safely.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">3. Retail and Manufacturing</h3>
-                <ul className="list-disc ml-6 text-white/80 space-y-1">
-                  <li>Automated checkout systems recognize products without barcodes.</li>
-                  <li>Quality control systems detect defects in production lines.</li>
-                  <li>Computer vision tracks customer behavior in stores to improve layout and experience.</li>
-                </ul>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Healthcare</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Imaging for medical diagnosis employs mainly detection and segmentation to identify the markers of diseases from X-rays, CT scans, and MRIs. These tools support diagnosis and treatment planning.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">4. Security and Authentication</h3>
-                <ul className="list-disc ml-6 text-white/80 space-y-1">
-                  <li>Facial recognition is widely used in surveillance and personal device unlocking.</li>
-                  <li>Biometric verification systems combine vision with other data to improve accuracy.</li>
-                </ul>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Manufacturing</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Automatic vision systems track inventory, scan items, and check product quality faster and more consistently than manual inspection.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">5. Agriculture</h3>
-                <ul className="list-disc ml-6 text-white/80 space-y-1">
-                  <li>Drones monitor crops for disease, pests, or irrigation needs.</li>
-                  <li>Automated systems grade fruits and vegetables for quality.</li>
-                </ul>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Retail and E-commerce</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Systems like Amazon's Just Walk Out rely on vision for tracking of items taken by customers, while augmented reality and pose estimation enable virtual try-ons for clothes and eyewear.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">6. Sports and Entertainment</h3>
-                <ul className="list-disc ml-6 text-white/80 space-y-1">
-                  <li>Instant replay systems analyze player movements.</li>
-                  <li>AR filters in social media apps rely on facial landmark detection.</li>
-                </ul>
+                <h3 className="text-xl font-semibold text-secondary mb-3">Robotics</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Robots use vision in navigation, picking and placing of objects, and safely interacting with people and the environment.
+                </p>
               </div>
             </div>
-
-            <p className="text-white/80 leading-relaxed mb-10">
-              These applications show how computer vision bridges scientific research with real-world utility.
-            </p>
           </section>
 
-          {/* SECTION: Challenges */}
-          <section id="challenges" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Challenges in Computer Vision</h2>
-            <p className="text-white/80 leading-relaxed mb-4">Despite its progress, computer vision faces important challenges:</p>
-            
-            <ul className="list-disc ml-6 text-white/80 mb-6 space-y-2">
-              <li><strong>Data Dependency:</strong> High-performing models require vast, diverse datasets. Without enough variation, models may fail in real-world conditions.</li>
-              <li><strong>Generalization:</strong> A system trained on one dataset might not perform well in different environments (e.g., a face recognition system trained on adults may fail with children).</li>
-              <li><strong>Bias and Fairness:</strong> If training data lacks diversity, models may produce biased outcomes, particularly in sensitive areas like law enforcement or healthcare.</li>
-              <li><strong>Real-World Conditions:</strong> Poor lighting, motion blur, occlusion, or low resolution can reduce accuracy.</li>
-              <li><strong>Deployment Constraints:</strong> Running vision systems on edge devices like smartphones or cameras requires balancing speed, memory, and energy efficiency.</li>
-            </ul>
-            
-            <p className="text-white/80 leading-relaxed mb-10">
-              These challenges remind us that while computer vision is powerful, careful design and ethical responsibility are essential for safe adoption.
-            </p>
+          {/* SECTION: Tools */}
+          <section id="tools" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">9. Computer Vision Tools</h2>
+            <p className="text-white/80 leading-relaxed mb-4">Popular tools and libraries include:</p>
+
+            <div className="space-y-4 mb-6">
+              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+                <h3 className="text-lg font-semibold text-secondary mb-2">Keras</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Keras is a simple deep learning API that runs on top of frameworks like TensorFlow or PyTorch. It includes a variety of tutorials and examples dealing with images.
+                </p>
+              </div>
+
+              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+                <h3 className="text-lg font-semibold text-secondary mb-2">OpenCV</h3>
+                <p className="text-white/80 leading-relaxed">
+                  OpenCV is a general library of open-source image processing, comprising a great number of filtering, detection, and video analysis algorithms. It contains Python, Java, and C++ bindings.
+                </p>
+              </div>
+
+              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+                <h3 className="text-lg font-semibold text-secondary mb-2">Scikit-image</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Scikit-image is a Python package with easy-to-use image processing functions useful for preprocessing and simple feature extraction.
+                </p>
+              </div>
+
+              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+                <h3 className="text-lg font-semibold text-secondary mb-2">TensorFlow</h3>
+                <p className="text-white/80 leading-relaxed">
+                  TensorFlow is a general deep learning platform from Google. It contains tools and datasets that can be used for image classification, segmentation, and detection.
+                </p>
+              </div>
+
+              <div className="bg-primary/40 rounded-lg p-4 border border-secondary/20">
+                <h3 className="text-lg font-semibold text-secondary mb-2">Torchvision</h3>
+                <p className="text-white/80 leading-relaxed">
+                  Torchvision is a part of PyTorch and includes common image transforms, datasets, and prebuilt models for vision tasks.
+                </p>
+              </div>
+            </div>
           </section>
 
-          {/* SECTION: Future */}
-          <section id="future" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">Future of Computer Vision</h2>
+          {/* SECTION: History */}
+          <section id="history" className="scroll-mt-24 mb-10">
+            <h2 className="text-2xl font-bold text-white mb-4">10. A Brief History of Computer Vision</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              The next phase of computer vision will likely be shaped by several trends:
-            </p>
-            
-            <ul className="list-disc ml-6 text-white/80 mb-6 space-y-2">
-              <li><strong>Edge AI:</strong> Instead of sending all data to cloud servers, models will run directly on devices like smartphones, drones, or IoT sensors. This reduces latency and enhances privacy.</li>
-              <li><strong>AR and VR:</strong> Computer vision will power more immersive experiences, from gaming to remote training in industries like medicine or aviation.</li>
-              <li><strong>Smart Cities:</strong> Vision systems will help manage traffic flow, detect accidents, and enhance public safety.</li>
-              <li><strong>Healthcare Breakthroughs:</strong> Faster, AI-assisted diagnostics could make healthcare more accessible and accurate worldwide.</li>
-              <li><strong>Ethical AI:</strong> Greater focus will be placed on building fair, transparent systems that protect user privacy.</li>
-            </ul>
-            
-            <p className="text-white/80 leading-relaxed mb-10">
-              Looking ahead, computer vision will expand beyond specialized tools into everyday infrastructure, influencing how people live and work.
+              Computer vision started in the 1950s and the 1960s. Early experiments with animals revealed that they detect simple shapes, like lines, first. At the same time, computers gained ways to scan and digitize images. Over decades, methods evolved from simple shape detection through modern neural networks, which can recognize complex scenes and generate images.
             </p>
           </section>
 
           {/* SECTION: Conclusion */}
-          <section id="conclusion" className="scroll-mt-24">
+          <section id="conclusion" className="scroll-mt-24 mb-10">
             <h2 className="text-2xl font-bold text-white mb-4">Conclusion</h2>
             <p className="text-white/80 leading-relaxed mb-4">
-              Computer vision is transforming how machines interact with the world. By teaching computers to understand images and videos, we are enabling new possibilities in healthcare, transportation, security, manufacturing, and beyond. While the technology faces challenges such as bias, data needs, and deployment issues, its future potential is vast.
+              Computer vision converts visual data from images and video into useful information. From medical image analysis to self-driving cars, computer vision solves many applications by harnessing data, preprocessing, model choice, and training. Thus, as the quality of data and models improves, vision systems are getting both more accurate and much more pervasive in daily life.
             </p>
-            <p className="text-white/80 leading-relaxed mb-10">
-              As AI research advances and computing power grows, computer vision will continue to move from experimental labs into the real world, driving innovation in industries and daily life.
-            </p>
-          </section>
-
-          {/* SECTION: FAQ */}
-          <section id="faq" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-white mb-4">FAQ</h2>
-            
-            <div className="space-y-6 mb-10">
-              <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">What is computer vision in simple terms?</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Computer vision is a branch of artificial intelligence that enables machines to interpret and understand images or videos, similar to how humans see and process visual information.
-                </p>
-              </div>
-
-              <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">How is computer vision used in real life?</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Computer vision is used in facial recognition, medical imaging, self-driving cars, retail automation, manufacturing quality checks, agriculture monitoring, and even AR filters in social media apps.
-                </p>
-              </div>
-
-              <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">What is the difference between image processing and computer vision?</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Image processing focuses on improving or transforming images, such as adjusting brightness or removing noise. Computer vision goes further by analyzing and interpreting images to make decisions or predictions.
-                </p>
-              </div>
-
-              <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">Why is deep learning important in computer vision?</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Deep learning, especially Convolutional Neural Networks (CNNs), helps computer vision systems automatically detect patterns and features in images, leading to more accurate object detection, classification, and recognition.
-                </p>
-              </div>
-
-              <div className="bg-primary/40 rounded-lg p-6 border border-secondary/20">
-                <h3 className="text-lg font-semibold text-secondary mb-2">What are the main challenges in computer vision?</h3>
-                <p className="text-white/80 leading-relaxed">
-                  Key challenges include the need for large datasets, risk of bias in training data, handling poor image quality, and deploying models efficiently on real-world devices.
-                </p>
-              </div>
-            </div>
           </section>
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function MobileNavbar() {
         },
         {
           href: "/ai-training",
-          label: "AI Training",
+          label: "AI Training Courses",
         },
       ],
     },

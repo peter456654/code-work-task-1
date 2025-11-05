@@ -88,7 +88,7 @@ export default function Navbar() {
         },
         {
           href: "https://cplc.codework.ai/",
-          label: "AI Training",
+          label: "AI Training Courses",
         },
       ],
       dropdownImage: "/navmenu1.jpg",
