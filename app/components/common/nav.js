@@ -113,6 +113,10 @@ export default function Navbar() {
           href: "/industries-you-must-know",
           label: "Industries",
         },
+        {
+          href: "/ai-automations",
+          label: "100 AI Automations (Booklet)",
+        },
       ],
       dropdownImage: "/navmenu2.jpg",
     },
@@ -378,7 +382,7 @@ export default function Navbar() {
         className={`fixed top-16 sm:top-18 md:top-20 left-0 w-full bg-primary shadow-2xl z-40 overflow-hidden transition-all duration-500 ease-out ${
           isDropdownOpen !== null &&
           navLinks[isDropdownOpen]?.dropdown.length > 0
-            ? "h-[40vh] sm:h-[45vh] md:h-[50vh] opacity-100 visible"
+            ? "h-[40vh] sm:h-[50vh] md:h-[60vh] opacity-100 visible"
             : "h-0 opacity-0 invisible"
         }`}
         onMouseEnter={() => {
