@@ -13,7 +13,7 @@ const getMetaTags = (pathname) => {
         title:
           "AI Software Development & Innovation | CODEWORK",
         description:
-          "Discover how to lead the change. We help businesses harness the power of AI-driven software development to build a competitive advantage and unlock a new era of innovation.",
+          "Partner with a trusted AI development firm specializing in customized solutions to automate workflows and support business scaling.",
         keywords:
           "AI software development, machine learning, data science, cybersecurity, cloud computing, web development, mobile app development, AI consulting, generative AI, NLP, data engineering, predictive analytics, blockchain, Reactjs & Nextjs, Java & Python, Azure, AWS, R language, Deep Learning, Neural Networks",
       };
