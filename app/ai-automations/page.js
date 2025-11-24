@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { FiStar, FiZap, FiCpu, FiChevronDown } from 'react-icons/fi';
+import { FiCpu } from 'react-icons/fi';
+ 
 
 export default function LaunchPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -87,113 +88,40 @@ export default function LaunchPage() {
         />
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12">
-        
-        {/* Logo Section */}
-        <div 
-          className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}
-        >
-          <div className="mb-8 flex flex-col items-center">
-            {/* C Logo */}
-            <div className="relative mb-6">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#1ddfea] to-[#0ea5b0] flex items-center justify-center shadow-lg shadow-[#1ddfea]/30">
-                <span className="text-5xl font-bold text-[#050c25]">C</span>
-              </div>
-              <div className="absolute -inset-2 rounded-full bg-[#1ddfea] opacity-20 blur-xl animate-pulse" />
-            </div>
-            
-            {/* CODEWORK Text */}
-            <h1 className="text-4xl md:text-5xl font-bold tracking-wider mb-2 bg-gradient-to-r from-[#1ddfea] to-[#0ea5b0] bg-clip-text text-transparent">
-              CODEWORK
-            </h1>
-            <p className="text-gray-300 text-sm md:text-base tracking-wide">
-              Transforming ideas into digital realities
-            </p>
-          </div>
-        </div>
-
-        {/* Launching Soon Text */}
-        <div 
-          className={`text-center mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
-        >
-          <h2 className="text-6xl md:text-8xl font-serif italic mb-4 bg-gradient-to-r from-white to-[#a7fff7] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(29,223,234,0.4)]">
-            Launching
-          </h2>
-          <h2 className="text-6xl md:text-8xl font-serif italic bg-gradient-to-r from-white to-[#a7fff7] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(29,223,234,0.4)]">
-            soon!
-          </h2>
-        </div>
-
-        {/* 100 AI Automations Section */}
-        <div 
-          className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
+      <div className="relative z-10 flex flex-col items-center px-4 py-24">
+        <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="flex items-center gap-6 bg-gradient-to-r from-[#050c25]/80 to-[#0a1642]/80 backdrop-blur-sm px-8 py-6 rounded-2xl border border-[#1ddfea]/40 shadow-2xl shadow-[#1ddfea]/30">
-            
-            {/* AI Icon */}
             <div className="relative">
               <div className="w-20 h-20 border-4 border-[#1ddfea] rounded-xl flex items-center justify-center relative overflow-hidden bg-[#050c25]">
                 <FiCpu className="w-10 h-10 text-[#1ddfea]" />
-                
-                {/* Animated corner lines */}
                 <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#1ddfea]" />
                 <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[#1ddfea]" />
                 <div className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-[#1ddfea]" />
                 <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#1ddfea]" />
               </div>
-              
-              {/* Pulse effect */}
               <div className="absolute inset-0 border-4 border-[#1ddfea] rounded-xl animate-ping opacity-20" />
             </div>
-
-            {/* Text */}
             <div className="text-left">
               <div className="flex items-baseline gap-3">
                 <span className="text-7xl md:text-8xl font-bold text-white drop-shadow-[0_0_8px_rgba(29,223,234,0.35)]">100</span>
                 <span className="text-2xl md:text-3xl font-bold text-[#ffc107]">∞</span>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#ffc107] tracking-wide drop-shadow-[0_0_6px_rgba(255,193,7,0.3)]">
-                Automations
-              </h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#ffc107] tracking-wide drop-shadow-[0_0_6px_rgba(255,193,7,0.3)]">Automations</h3>
             </div>
           </div>
         </div>
-
-        <div 
-          className={`mt-10 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}
+        <h1 className="text-4xl md:text-5xl font-bold tracking-wide mb-3 bg-gradient-to-r from-[#1ddfea] to-[#0ea5b0] bg-clip-text text-transparent">AI Automations</h1>
+        <p className="text-white/80 text-center mb-6 max-w-2xl">A concise overview of our AI automation capabilities and platform architecture. Scroll within the viewer to explore.</p>
+        <a
+          href="/pdf/aiautomation.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#1ddfea] text-[#050c25] font-semibold shadow-lg shadow-[#1ddfea]/30 hover:shadow-[#1ddfea]/50 transition-all hover:scale-105 border border-[#1ddfea] mb-6"
         >
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#1ddfea] text-[#050c25] font-semibold shadow-lg shadow-[#1ddfea]/30 hover:shadow-[#1ddfea]/50 transition-all hover:scale-105 border border-[#1ddfea]"
-          >
-            Get notified
-            <FiStar className="w-5 h-5" />
-          </a>
-        </div>
-
-        {/* Features Grid */}
-        <div 
-          className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
-          {[
-            { icon: FiStar, text: "AI-Powered Solutions" },
-            { icon: FiZap, text: "Lightning Fast" },
-            { icon: FiCpu, text: "Smart Automation" }
-          ].map((feature, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center gap-3 p-6 bg-[#050c25]/40 backdrop-blur-sm rounded-xl border border-[#1ddfea]/20 hover:border-[#1ddfea]/50 transition-all hover:scale-105"
-            >
-              <feature.icon className="w-8 h-8 text-[#1ddfea]" />
-              <p className="text-gray-300 text-sm text-center">{feature.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <FiChevronDown className="w-8 h-8 text-[#1ddfea] opacity-50" />
+          Open Full Screen
+        </a>
+        <div className="w-full max-w-5xl h-[75vh] bg-[#050c25] border border-[#1ddfea]/40 rounded-xl shadow-2xl shadow-[#1ddfea]/20 overflow-hidden">
+          <iframe src="/pdf/aiautomation.pdf#zoom=100" className="w-full h-full" />
         </div>
       </div>
 
