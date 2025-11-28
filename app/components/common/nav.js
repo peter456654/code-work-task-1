@@ -364,7 +364,7 @@ export default function Navbar() {
                   type="button"
                   className="relative z-10 bg-primary text-white rounded-full px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 font-semibold text-xs sm:text-sm lg:text-base whitespace-nowrap hover:bg-gradient-to-r hover:from-primary hover:to-primary/80 transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20"
                 >
-                  Get In Touch
+                  Get Started
                 </button>
               </div>
             </Link>

@@ -229,7 +229,7 @@ const Footer = () => {
           {/* Get In Touch */}
           <div>
             <h3 className="text-base lg:pt-12 sm:pt-0 xl:pt-12 sm:text-lg font-semibold mb-12 sm:mb-12 text-secondary">
-              Get In Touch
+              Get Started
             </h3>
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-r from-secondary to-secondary/80 flex items-center justify-center shadow-lg">

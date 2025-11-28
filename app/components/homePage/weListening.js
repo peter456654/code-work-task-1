@@ -78,7 +78,7 @@ const WeListening = () => {
         <div className="flex flex-col justify-center space-y-8">
           {/* Section Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm w-fit">
-            <span className="text-secondary text-sm font-medium">— Get In Touch —</span>
+            <span className="text-secondary text-sm font-medium">— Get Started —</span>
           </div>
 
           {/* Enhanced Quote Icon with Animation */}

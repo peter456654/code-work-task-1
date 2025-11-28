@@ -234,7 +234,7 @@ export default function MobileNavbar() {
             </div>
           ))}
 
-          {/* Get In Touch Button */}
+          {/* Get Started Button */}
           <div
             className={`pt-4 ${isMenuOpen ? "animate-fadeInUp" : ""}`}
             style={{ animationDelay: `${navLinks.length * 100}ms` }}
@@ -244,7 +244,7 @@ export default function MobileNavbar() {
                 className="w-full bg-gradient-to-r from-secondary to-secondary/80 text-primary font-bold px-6 py-4 rounded-xl hover:from-secondary/90 hover:to-secondary hover:shadow-2xl hover:shadow-secondary/25 transform hover:scale-105 transition-all duration-300 relative overflow-hidden group"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <span className="relative z-10">Get In Touch</span>
+                <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
               </button>
             </Link>

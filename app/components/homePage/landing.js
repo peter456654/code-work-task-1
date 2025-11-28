@@ -1,285 +1,26 @@
 "use client";
-import React, { useRef, useMemo, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Sphere, MeshDistortMaterial, Float, Box, Text } from "@react-three/drei";
-import * as THREE from "three";
-
-// Enhanced 3D Model Component
-function Enhanced3DModel({ isHovered }) {
-  const meshRef = useRef();
-  const groupRef = useRef();
-  
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.3;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.4;
-    }
-    if (groupRef.current) {
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.1;
-    }
-  });
-
-  return (
-    <group ref={groupRef}>
-      <Float speed={isHovered ? 3 : 1.5} rotationIntensity={isHovered ? 2 : 1} floatIntensity={isHovered ? 4 : 2}>
-        {/* Main central sphere */}
-        <Sphere ref={meshRef} args={[0.8, 64, 64]} scale={isHovered ? 1.3 : 1}>
-          <MeshDistortMaterial
-            color={isHovered ? "#00F5FF" : "#00F5FF"}
-            attach="material"
-            distort={isHovered ? 0.8 : 0.4}
-            speed={isHovered ? 3 : 1.5}
-            roughness={0.2}
-            metalness={0.7}
-            transparent
-            opacity={0.9}
-            emissive={isHovered ? "#00F5FF" : "#00F5FF"}
-            emissiveIntensity={0.2}
-          />
-        </Sphere>
-        
-        {/* Orbiting smaller spheres */}
-        {[...Array(3)].map((_, i) => (
-          <Float key={i} speed={2 + i} rotationIntensity={1} floatIntensity={2}>
-            <Sphere 
-              args={[0.15, 32, 32]} 
-              position={[
-                Math.cos((i * Math.PI * 2) / 3 + Date.now() * 0.001) * 2,
-                Math.sin((i * Math.PI * 2) / 3 + Date.now() * 0.001) * 0.5,
-                Math.sin((i * Math.PI * 2) / 3 + Date.now() * 0.001) * 2
-              ]}
-            >
-              <meshStandardMaterial 
-                color="#00F5FF" 
-                transparent 
-                opacity={0.7} 
-                emissive="#00F5FF" 
-                emissiveIntensity={0.1}
-              />
-            </Sphere>
-          </Float>
-        ))}
-      </Float>
-    </group>
-  );
-}
-
-// Square Box Particles Component
-function SquareBoxParticles({ isHovered }) {
-  const groupRef = useRef();
-  
-  const boxes = useMemo(() => {
-    const boxArray = [];
-    for (let i = 0; i < 50; i++) {
-      boxArray.push({
-        position: [
-          (Math.random() - 0.5) * 8,
-          (Math.random() - 0.5) * 8,
-          (Math.random() - 0.5) * 8
-        ],
-        rotation: [Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI],
-        scale: Math.random() * 0.1 + 0.05
-      });
-    }
-    return boxArray;
-  }, []);
-
-  useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.x = state.clock.elapsedTime * 0.02;
-      groupRef.current.rotation.y = state.clock.elapsedTime * 0.03;
-      
-      // Animate individual boxes
-      groupRef.current.children.forEach((child, i) => {
-        if (child.rotation) {
-          child.rotation.x += 0.01 * (i % 3 + 1);
-          child.rotation.y += 0.01 * (i % 2 + 1);
-          child.rotation.z += 0.005 * (i % 4 + 1);
-          
-          if (isHovered) {
-            child.scale.setScalar(Math.sin(state.clock.elapsedTime * 2 + i) * 0.05 + 0.1);
-          }
-        }
-      });
-    }
-  });
-
-  return (
-    <group ref={groupRef}>
-      {boxes.map((box, i) => (
-        <Box
-          key={i}
-          args={[box.scale, box.scale, box.scale]}
-          position={box.position}
-          rotation={box.rotation}
-        >
-          <meshStandardMaterial 
-            color={isHovered ? "#00F5FF" : "#00F5FF"} 
-            transparent 
-            opacity={isHovered ? 0.8 : 0.4}
-            wireframe={i % 3 === 0}
-            emissive={isHovered ? "#00F5FF" : "#00F5FF"}
-            emissiveIntensity={0.1}
-          />
-        </Box>
-      ))}
-    </group>
-  );
-}
-
-// Interactive 3D Scene Component
-function Interactive3DScene() {
-  const [isHovered, setIsHovered] = useState(false);
-  
-  return (
-    <div 
-      className="relative w-full h-full cursor-pointer"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-        <ambientLight intensity={isHovered ? 1.0 : 0.8} color="#ffffff" />
-        <pointLight position={[5, 5, 5]} intensity={isHovered ? 2.0 : 1.5} color="#00F5FF" />
-        <pointLight position={[-5, -5, -5]} intensity={1.0} color="#ffffff" />
-        <spotLight 
-          position={[0, 10, 0]} 
-          angle={0.3} 
-          penumbra={1} 
-          intensity={isHovered ? 1.5 : 1.0} 
-          color="#ffffff"
-        />
-        <directionalLight 
-          position={[10, 10, 5]} 
-          intensity={0.5} 
-          color="#ffffff"
-        />
-        
-        <Enhanced3DModel isHovered={isHovered} />
-        <SquareBoxParticles isHovered={isHovered} />
-        
-        <OrbitControls 
-          enableZoom={false} 
-          enablePan={false} 
-          autoRotate 
-          autoRotateSpeed={isHovered ? 2 : 1}
-          enableDamping
-          dampingFactor={0.05}
-        />
-      </Canvas>
-    </div>
-  );
-}
-
-// 3D Animated Sphere Component
-function AnimatedSphere() {
-  const meshRef = useRef();
-  
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.2;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
-    }
-  });
-
-  return (
-    <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
-      <Sphere ref={meshRef} args={[1, 100, 200]} scale={2.5}>
-        <MeshDistortMaterial
-          color="#00F5FF"
-          attach="material"
-          distort={0.5}
-          speed={2}
-          roughness={0.1}
-          metalness={0.8}
-        />
-      </Sphere>
-    </Float>
-  );
-}
-
-// Floating Particles Component
-function FloatingParticles() {
-  const points = useRef();
-  
-  const particlesPosition = useMemo(() => {
-    const positions = new Float32Array(200 * 3);
-    for (let i = 0; i < 200; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
-    }
-    return positions;
-  }, []);
-
-  useFrame((state) => {
-    if (points.current) {
-      points.current.rotation.x = state.clock.elapsedTime * 0.05;
-      points.current.rotation.y = state.clock.elapsedTime * 0.075;
-    }
-  });
-
-  return (
-    <points ref={points}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={particlesPosition.length / 3}
-          array={particlesPosition}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial size={0.05} color="#00F5FF" sizeAttenuation transparent opacity={0.8} />
-    </points>
-  );
-}
-
-// Interactive 3D Background
-function Interactive3DBackground() {
-  return (
-    <Canvas
-      camera={{ position: [0, 0, 5], fov: 75 }}
-      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-    >
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#00F5FF" />
-      
-      <AnimatedSphere />
-      <FloatingParticles />
-      
-      <OrbitControls
-        enableZoom={false}
-        enablePan={false}
-        enableRotate={true}
-        autoRotate={true}
-        autoRotateSpeed={0.5}
-      />
-    </Canvas>
-  );
-}
-
 const Landing = () => {
   return (
     <section className="relative w-full h-auto sm:h-[80vh] md:h-screen flex items-center bg-primary overflow-hidden">
       {/* Interactive 3D Background */}
       <div className="absolute inset-0 w-full h-full">
-        <Interactive3DBackground />
         
         {/* Gradient overlay for better text readability */}
         <div
           className="absolute inset-0 w-full h-full z-10"
           style={{
-            background: `linear-gradient(135deg, rgba(5,12,37,0.8) 0%, rgba(5,12,37,0.6) 30%, rgba(5,12,37,0.4) 70%, rgba(5,12,37,0.8) 100%)`,
+            background: `linear-gradient(135deg, rgba(0, 37, 62) 0%, rgba(0, 37, 62) 30%, rgba(0, 37, 62) 70%, rgba(0, 37, 62) 100%)`,
           }}
         ></div>
 
         {/* Enhanced animated blob shapes */}
-        <div className="absolute inset-0 z-20">
+        {/* <div className="absolute inset-0 z-20">
           <div className="absolute top-20 left-20 w-32 h-32 bg-secondary/10 rounded-full animate-blob blur-xl"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-secondary/15 rounded-full animate-blob animation-delay-2000 blur-lg"></div>
           <div className="absolute bottom-32 left-1/3 w-40 h-40 bg-secondary/8 rounded-full animate-blob animation-delay-4000 blur-2xl"></div>
-        </div>
+        </div> */}
 
         {/* Enhanced stars effect */}
         <div className="absolute inset-0 z-20">
@@ -297,7 +38,7 @@ const Landing = () => {
         <div className="flex flex-col md:flex-row items-center">
           
           {/* Left Side - Text Content */}
-          <div className="w-full md:w-1/2 lg:w-3/5 text-center md:text-left pt-12 md:pt-0">
+          <div className="w-full text-center md:text-left pt-12 md:pt-0">
             
             {/* Enhanced Heading Container */}
             <div className="heading-container mb-8 pt-16 sm:pt-16 md:pt-24 lg:pt-24 xl:pt-28">
@@ -335,7 +76,7 @@ const Landing = () => {
                   type="button"
                   className="flex justify-center gap-4 items-center shadow-2xl text-base bg-transparent backdrop-blur-md font-semibold isolation-auto border-secondary/50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-secondary hover:text-primary before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-8 py-4 overflow-hidden border-2 rounded-full group text-white hover:shadow-secondary/25 hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <span className="font-semibold tracking-wide">Free Consulting</span>
+                  <span className="font-semibold tracking-wide">Start Consulting</span>
                   <svg
                     className="w-6 h-6 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-white group-hover:border-none p-1 rotate-45 group-hover:scale-110"
                     viewBox="0 0 16 19"
@@ -365,12 +106,7 @@ const Landing = () => {
                 <span>Industry Leading</span>
               </div>
             </div>
-          </div>
-
-          {/* Right Side - Enhanced 3D Interactive Element */}
-          <div className="w-full md:w-1/2 lg:w-2/5 h-64 md:h-96 mt-8 md:mt-0 md:ml-12 lg:ml-16 xl:ml-20 md:pl-8 lg:pl-12">
-            <Interactive3DScene />
-          </div>
+          </div>          
         </div>
       </div>
 
@@ -415,10 +151,6 @@ const Landing = () => {
           animation-delay: 4s;
         }
 
-        /* Enhanced 3D effects */
-        canvas {
-          background: transparent !important;
-        }
       `}</style>
     </section>
   );
