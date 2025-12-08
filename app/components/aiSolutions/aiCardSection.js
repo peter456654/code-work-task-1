@@ -1,13 +1,28 @@
 "use client";
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { MdArrowCircleRight } from "react-icons/md";
+import { RiBrain2Fill } from 'react-icons/ri';
+import { BsStars, BsFillBarChartLineFill } from 'react-icons/bs';
+import { GiGears } from 'react-icons/gi';
+import { AiFillMessage } from 'react-icons/ai';
+import { FaDatabase, FaRobot } from 'react-icons/fa';
+import { MdOutlineSecurity } from 'react-icons/md';
 import MobileSection from './mobileSection';
 
 const Card = ({ card, additionalStyle, index }) => {
+  const router = useRouter();
   const IconComponent = card.icon;
+
+  const handleCardClick = () => {
+    if (card.link) {
+      router.push(card.link);
+    }
+  };
 
   return (
     <div
+      onClick={handleCardClick}
       className={`relative ${card.roundedCorner} overflow-hidden shadow-2xl bg-cover bg-center transition-all duration-700 transform hover:scale-105 hover:-rotate-1 cursor-pointer ${additionalStyle} group h-[220px] sm:h-[320px] md:h-[360px] w-full max-w-[520px] animate-float-up`}
       style={{ 
         backgroundImage: `url(${card.image})`,
@@ -84,7 +99,8 @@ const AiCardSection = () => {
       description: 'Our AI consulting services deliver tailor-made solutions that align with your business goals, helping organizations identify opportunities for automation and growth.',
       image: '/AiSolution/aiconsulting.png',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
-      icon: require('react-icons/ri').RiBrain2Fill,
+      icon: RiBrain2Fill,
+      link: '/ai-consulting',
     },
     {
       id: 2,
@@ -92,7 +108,8 @@ const AiCardSection = () => {
       description: 'Creativity meets technology with our Generative AI solutions, boosting productivity and turning your ideas into reality.',
       image: '/AiSolution/GenerativeAi.png',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
-      icon: require('react-icons/bs').BsStars,
+      icon: BsStars,
+      link: '/generative-ai',
     },
     {
       id: 3,
@@ -100,7 +117,8 @@ const AiCardSection = () => {
       description: 'Leveraging advanced frameworks like PyTorch and TensorFlow, we enable data-driven decisions and predictive insights.',
       image: '/AiSolution/ML.png',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
-      icon: require('react-icons/gi').GiGears,
+      icon: GiGears,
+      link: '/machine-learning',
     },
     {
       id: 4,
@@ -108,7 +126,8 @@ const AiCardSection = () => {
       description: 'Advanced NLP solutions that enhance text analysis, automate customer support, and improve communication.',
       image: '/AiSolution/NLP.png',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
-      icon: require('react-icons/ai').AiFillMessage,
+      icon: AiFillMessage,
+      link: '/natural-language-processing',
     },
     {
       id: 5,
@@ -116,7 +135,8 @@ const AiCardSection = () => {
       description: 'Robust data infrastructure services ensuring your data is well-organized, accessible, and efficiently processed.',
       image: '/AiSolution/DE.png',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
-      icon: require('react-icons/fa').FaDatabase,
+      icon: FaDatabase,
+      link: '/data-engineering',
     },
     {
       id: 6,
@@ -124,7 +144,8 @@ const AiCardSection = () => {
       description: 'Advanced cybersecurity solutions using cutting-edge technologies to protect your digital assets and infrastructure.',
       image: '/AiSolution/CS.png',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
-      icon: require('react-icons/md').MdOutlineSecurity,
+      icon: MdOutlineSecurity,
+      link: '/ai-in-cybersecurity',
     },
     {
       id: 7,
@@ -132,7 +153,8 @@ const AiCardSection = () => {
       description: 'AI-driven forecasting models that analyze trends, predict outcomes, and deliver actionable insights for better planning.',
       image: '/AiSolution/PA.png',
       roundedCorner: 'rounded-tl-[170px] rounded-br-[170px]',
-      icon: require('react-icons/bs').BsFillBarChartLineFill,
+      icon: BsFillBarChartLineFill,
+      link: '/predictive-analytics',
     },
     {
       id: 8,
@@ -140,7 +162,8 @@ const AiCardSection = () => {
       description: 'Intelligent AI chatbots that enhance customer engagement with real-time responses and improved user satisfaction.',
       image: '/AiSolution/ai.png',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
-      icon: require('react-icons/fa').FaRobot,
+      icon: FaRobot,
+      link: '/ai-chatbots',
     },
   ];
 
