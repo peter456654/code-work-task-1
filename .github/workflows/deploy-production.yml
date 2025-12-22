@@ -3,7 +3,7 @@ name: CodeWork-Marketing-Production
 on:
   push:
     branches:
-      - master
+      - newchange
   workflow_dispatch: 
 
 jobs:

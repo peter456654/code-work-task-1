@@ -291,7 +291,7 @@ export default function Navbar() {
 
       
                     {/* Corner accents */}
-                    <div className={`absolute top-0 left-0 w-0 h-0 border-t-2 border-l-2 border-transparent transition-all duration-300 ${
+                    <div className={`absolute  top-0 left-0 w-0 h-0 border-t-2 border-l-2 border-transparent transition-all duration-300 ${
                       hoveredLink === index || isPageActive(item)
                         ? 'w-4 h-4 border-secondary' 
                         : 'group-hover:w-4 group-hover:h-4 group-hover:border-secondary'
