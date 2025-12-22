@@ -65,7 +65,7 @@ const WeListening = () => {
           </Link>
         </div>
         <h1 className="text-5xl md:text-6xl font-bold mb-4">Other Inquiries</h1>
-        <p className="text-lg mb-12">If you’re looking for career opportunities, please visit <a href="https://codework.ai/careers" target="_blank" rel="noopener noreferrer" className="underline">codework.ai/careers</a>.</p>
+        <p className="text-lg mb-12">If you’re looking for career opportunities, please visit <a href="https://codework.ai/careers-at-codework" target="_blank" rel="noopener noreferrer" className="underline">codework.ai/careers</a>.</p>
 
         <form onSubmit={handleSubmit} className="space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

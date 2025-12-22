@@ -51,8 +51,8 @@ const JoinUsHeader = () => {
               
               {/* Step 1: Application */}
               <div className="relative mb-8 sm:mb-12 text-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-r from-secondary via-primary to-secondary/80 rounded-full flex items-center justify-center shadow-2xl mb-4 hover:scale-110 transition-transform duration-300 border-4 border-primary/20">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-secondary/10 rounded-full flex items-center justify-center shadow-2xl mb-4 hover:scale-110 transition-transform duration-300 border-2 border-primary">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
                     <polyline points="14,2 14,8 20,8"/>
                     <line x1="16" y1="13" x2="8" y2="13"/>
@@ -75,8 +75,8 @@ const JoinUsHeader = () => {
 
               {/* Step 2: Interview */}
               <div className="relative mb-8 sm:mb-12 text-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-r from-secondary via-primary to-secondary/80 rounded-full flex items-center justify-center shadow-2xl mb-4 hover:scale-110 transition-transform duration-300 border-4 border-primary/20">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-secondary/10 rounded-full flex items-center justify-center shadow-2xl mb-4 hover:scale-110 transition-transform duration-300 border-2 border-primary">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                     <path d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm6 3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM7 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
                   </svg>
                 </div>
@@ -95,8 +95,8 @@ const JoinUsHeader = () => {
 
               {/* Step 3: Join */}
               <div className="relative text-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-r from-secondary via-primary to-secondary/80 rounded-full flex items-center justify-center shadow-2xl mb-4 hover:scale-110 transition-transform duration-300 border-4 border-primary/20">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-secondary/10 rounded-full flex items-center justify-center shadow-2xl mb-4 hover:scale-110 transition-transform duration-300 border-2 border-primary">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-primary" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
