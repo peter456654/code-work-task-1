@@ -1,6 +1,7 @@
 "use client";
+
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { MdArrowCircleRight } from "react-icons/md";
 import { RiBrain2Fill } from 'react-icons/ri';
 import { BsStars, BsFillBarChartLineFill } from 'react-icons/bs';
@@ -11,63 +12,56 @@ import { MdOutlineSecurity } from 'react-icons/md';
 import MobileSection from './mobileSection';
 
 const Card = ({ card, additionalStyle, index }) => {
-  const router = useRouter();
   const IconComponent = card.icon;
-
-  const handleCardClick = () => {
-    if (card.link) {
-      router.push(card.link);
-    }
-  };
 
   return (
     <div
-      onClick={handleCardClick}
-      className={`relative overflow-hidden border border-white/10 shadow-2xl bg-cover bg-center transition-all duration-500 hover:scale-105 cursor-pointer group h-[240px] sm:h-[320px] md:h-[360px] w-full max-w-[520px] animate-float-up`}
+      className={`relative overflow-hidden border border-white/10 shadow-2xl bg-cover bg-center transition-all duration-500 hover:scale-105 cursor-pointer group h-[240px] sm:h-[320px] md:h-[360px] w-full max-w-[520px] animate-float-up rounded-none ${additionalStyle || ""}`}
       style={{
         backgroundImage: `url(${card.image})`,
         animationDelay: `${index * 0.2}s`
       }}
     >
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/70 via-secondary/50 to-secondary/30 opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/70 to-secondary opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
-      </div>
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/70 via-secondary/50 to-secondary/30 opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/70 to-secondary opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+        </div>
 
-      <div className="absolute bottom-0 w-full p-4 text-white transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-6">
-        <div className="flex justify-start ml-4 sm:ml-24 mb-4">
-          {IconComponent && (
+        <div className="absolute bottom-0 w-full p-4 text-white transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-6">
+          <div className="flex justify-start ml-4 sm:ml-24 mb-4">
+            {IconComponent && (
+              <div className="relative">
+                <IconComponent
+                  size={52}
+                  className="relative z-10 transition-all duration-300 group-hover:scale-105"
+                  style={{ fill: "url(#iconGradient)" }}
+                />
+              </div>
+            )}
+          </div>
+          <div className="w-full flex items-center ml-4 sm:ml-24 justify-between">
+            <h3 className="text-xl font-bold  text-primary transition-all duration-500 ease-in-out">
+              {card.title}
+            </h3>
+          </div>
+          <div className="absolute top-1/2 right-4 sm:right-16 md:right-16 lg:right-32 transform -translate-y-1/2 transition-all duration-500 ease-in-out group-hover:translate-x-24 group-hover:opacity-0">
             <div className="relative">
-              <IconComponent
-                size={52}
-                className="relative z-10 transition-all duration-300 group-hover:scale-105"
-                style={{ fill: "url(#iconGradient)" }}
-              />
+              <MdArrowCircleRight size={28} className="relative z-10" style={{ fill: "url(#iconGradient)" }} />
             </div>
-          )}
-        </div>
-        <div className="w-full flex items-center ml-4 sm:ml-24 justify-between">
-          <h3 className="text-xl font-bold  text-primary transition-all duration-500 ease-in-out">
-            {card.title}
-          </h3>
-        </div>
-        <div className="absolute top-1/2 right-4 sm:right-16 md:right-16 lg:right-32 transform -translate-y-1/2 transition-all duration-500 ease-in-out group-hover:translate-x-24 group-hover:opacity-0">
-          <div className="relative">
-            <MdArrowCircleRight size={28} className="relative z-10" style={{ fill: "url(#iconGradient)" }} />
           </div>
         </div>
-      </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-        <div className="text-center px-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-          <h3 className="text-2xl font-bold mb-3 text-primary">{card.title}</h3>
-          <p className="text-lg leading-relaxed font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {card.description}
-          </p>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+          <div className="text-center px-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
+            <h3 className="text-2xl font-bold mb-3 text-primary">{card.title}</h3>
+            <p className="text-lg leading-relaxed font-light max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              {card.description}
+            </p>
+          </div>
         </div>
-      </div>
 
-      
+        
+      <Link href={card.link || "#"} aria-label={card.title} className="absolute inset-0 z-20"></Link>
     </div>
   );
 };
