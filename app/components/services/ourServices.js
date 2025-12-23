@@ -108,7 +108,7 @@ export const servicesData = [
     description:
       "Codework offers Data Science & Analytics services to help you make data-driven decisions.",
     icon: FaCode,
-    link: "/data-science-analytics",
+    link: "/predictive-analytics",
     image: "https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/services/DataScience.jpg",
   },
 ];
