@@ -146,7 +146,7 @@ const AiCardSection = () => {
       image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/expertise/chatbot.jpg',
       roundedCorner: 'rounded-bl-[170px] rounded-tr-[170px]',
       icon: FaRobot,
-      link: '/ai-chatbots',
+      link: '/ai-chatbot-integration',
     },
   ];
 
