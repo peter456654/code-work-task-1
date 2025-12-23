@@ -181,9 +181,6 @@ const AiCardSection = () => {
       </svg>
 
       <div className="text-center mb-16 relative z-10">
-        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-          <span className="text-secondary text-sm font-medium">— AI Solutions —</span>
-        </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
           <span className="text-white"> Our  </span>
           <span className="text-primary">
