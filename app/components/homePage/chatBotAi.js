@@ -4,12 +4,12 @@ import { callChatbotApi } from '@/app/lib/chatbotClient.mjs'
 
 const ChatBotAi = () => {
   const suggestions = [
-    'What does CODEWORK do?',
-    'What applications does CODEWORK have?',
-    'What industries does CODEWORK serve?',
-    'What is a CODEWORK initial production deployment?',
-    'What agentic AI solutions does CODEWORK have?',
-    'What is CODEWORK Transform?'
+            "What is Codework?",
+            "What services does Codework offers?",
+            "What industries does Codework serve?",
+            "What products does Codework provide?",
+            "How can I contact Codework?",
+            "What courses and CPLC are available?"
   ]
 
   const [query, setQuery] = useState('')
