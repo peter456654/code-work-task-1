@@ -47,7 +47,7 @@ const SoftwareServices = () => {
   const activeServiceData = services[activeService];
 
   return (
-    <div className="min-h-screen bg-secondary text-primary">
+    <div className=" bg-secondary text-primary">
       {/* Header */}
       <div className="text-center  pb-12">
         <h1 className="text-5xl md:text-6xl font-bold mb-4 text-primary">AI Powered solution</h1>

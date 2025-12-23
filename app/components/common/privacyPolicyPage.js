@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 const PrivacyPolicyPage = () => (
-  <div className="min-h-screen bg-primary pt-32 pb-16 px-6 flex justify-center relative overflow-hidden">
+  <div className="min-h-screen bg-secondary text-primary pt-32 pb-16 px-6 flex justify-center relative overflow-hidden">
     {/* Background Decorative Elements */}
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full animate-blob"></div>
@@ -25,116 +25,114 @@ const PrivacyPolicyPage = () => (
     {/* Floating Elements */}
     <div className="absolute inset-0 pointer-events-none">
       <div className="absolute top-32 left-16 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
-      <div className="absolute top-48 right-20 w-2 h-2 bg-white/60 rounded-full animate-pulse animation-delay-1000"></div>
+      <div className="absolute top-48 right-20 w-2 h-2 bg-primary/60 rounded-full animate-pulse animation-delay-1000"></div>
       <div className="absolute bottom-56 left-1/4 w-4 h-4 bg-secondary/80 rounded-full animate-pulse animation-delay-2000"></div>
-      <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-white/40 rounded-full animate-pulse animation-delay-3000"></div>
+      <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-primary/40 rounded-full animate-pulse animation-delay-3000"></div>
     </div>
 
     <div className="w-full max-w-4xl relative z-10">
       {/* Enhanced Hero */}
       <header className="text-center mb-16 animate-slide-up">
-        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-white/5 backdrop-blur-sm mb-6">
-          <span className="text-secondary text-sm font-medium">— Legal Documentation —</span>
+        <div className="inline-flex items-center px-4 py-2 rounded-full border border-secondary/30 bg-primary/5 backdrop-blur-sm mb-6">
+          <span className="text-primary text-sm font-medium">— Legal Documentation —</span>
         </div>
         
         <h1 className="text-5xl md:text-6xl font-extrabold mb-4">
-          <span className="text-white">Privacy </span>
-          <span className="bg-gradient-to-r from-secondary via-cyan-400 to-secondary bg-clip-text text-transparent">
-            Policy
-          </span>
+          <span className="text-primary">Privacy </span>
+          <span className="text-primary">Policy</span>
         </h1>
         
         <div className="w-24 h-1 bg-gradient-to-r from-secondary to-transparent rounded-full mx-auto mb-4"></div>
         
-        <p className="text-white/80 text-lg">
-          Last Updated: <span className="text-secondary font-medium">April 22, 2025</span>
+        <p className="text-primary/80 text-lg">
+          Last Updated: <span className="text-primary font-medium">April 22, 2025</span>
         </p>
       </header>
 
       <div className="space-y-8">
         {/* Enhanced Introduction */}
-        <section id="introduction" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="introduction" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaShieldAlt className="text-primary text-lg" />
             </div>
-            <span className="text-white">Introduction</span>
+            <span className="text-primary">Introduction</span>
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
-              <span className="text-secondary font-medium">Codework</span> ("we", "our", or "us") operates this website (the "Site").
+              <span className="text-primary font-medium">Codework</span> ("we", "our", or "us") operates this website (the "Site").
               This page outlines our policies regarding the collection, use, and
               disclosure of Personal Information received from users of the Site.
               By using this Site, you agree to the collection and use of
               information in accordance with this policy.
             </p>
             <p>
-              <span className="text-secondary font-medium">Codework</span> is committed to safeguarding your Personal Data and
+              <span className="text-primary font-medium">Codework</span> is committed to safeguarding your Personal Data and
               privacy. We ensure that any personal data collected will be managed
               in strict compliance with applicable data protection legislation. If
               you are a resident of the European Union (or a country that has
               implemented local laws aligned with the GDPR), this includes the
-              <span className="text-secondary font-medium"> General Data Protection Regulation ("GDPR")</span> and relevant national
+              <span className="text-primary font-medium"> General Data Protection Regulation ("GDPR")</span> and relevant national
               legislation.
             </p>
           </div>
         </section>
 
         {/* Enhanced Information Collection */}
-        <section id="information-collection" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-200">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="information-collection" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-200">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaCookieBite className="text-primary text-lg" />
             </div>
-            <span className="text-white">Information Collection & Use</span>
+            <span className="text-primary">Information Collection & Use</span>
           </h2>
-          <div className="text-white/90 leading-relaxed">
+          <div className="text-primary/90 leading-relaxed">
             <p>
               While using our Site, we may request personally identifiable
               information that can be used to contact or identify you, such as
-              your name, email, or other identifiers (<span className="text-secondary font-medium">"Personal Information"</span>).
+              your name, email, or other identifiers (<span className="text-primary font-medium">"Personal Information"</span>).
             </p>
           </div>
         </section>
 
         {/* Enhanced Log Data */}
-        <section id="log-data" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-400">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="log-data" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-400">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaChartLine className="text-primary text-lg" />
             </div>
-            <span className="text-white">Log Data</span>
+            <span className="text-primary">Log Data</span>
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
               Like many websites, we collect information that your browser sends
-              whenever you visit our Site (<span className="text-secondary font-medium">"Log Data"</span>). This data may include your
+              whenever you visit our Site (<span className="text-primary font-medium">"Log Data"</span>). This data may include your
               IP address, browser type/version, visited pages, time and date of
               your visit, time spent on pages, and other analytical data. We may
-              use third-party services such as <span className="text-secondary font-medium">Google Analytics</span> to monitor and
+              use third-party services such as <span className="text-primary font-medium">Google Analytics</span> to monitor and
               analyze this information.
             </p>
             <p>
               Your Personal Information may also be used to contact you with
-              newsletters, informational content, or updates related to <span className="text-secondary font-medium">Codework's</span>
+              newsletters, informational content, or updates related to <span className="text-primary font-medium">Codework's</span>
               services and offerings.
             </p>
           </div>
         </section>
 
         {/* Enhanced Cookies */}
-        <section id="cookies" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-600">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="cookies" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-600">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaCookieBite className="text-primary text-lg" />
             </div>
-            <span className="text-white">Cookies</span>
+            <span className="text-primary">Cookies</span>
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
               Our Site uses cookies—small text files stored by your browser—to
-              improve user experience. Cookies may be <span className="text-secondary font-medium">"session"</span> (deleted after
-              use) or <span className="text-secondary font-medium">"persistent"</span> (stored for future visits). Persistent cookies
+              improve user experience. Cookies may be <span className="text-primary font-medium">"session"</span> (deleted after
+              use) or <span className="text-primary font-medium">"persistent"</span> (stored for future visits). Persistent cookies
               help us remember preferences and analyze user interaction over time.
             </p>
             <p>
@@ -148,7 +146,7 @@ const PrivacyPolicyPage = () => (
                   href="https://www.eucookie.eu/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-secondary hover:text-secondary/80 underline transition-colors duration-300"
+                  className="text-primary hover:text-primary/80 underline transition-colors duration-300"
                 >
                   EU Cookie Guide
                 </a>
@@ -158,7 +156,7 @@ const PrivacyPolicyPage = () => (
                   href="https://ico.org.uk/for-organisations/guide-to-pecr/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-secondary hover:text-secondary/80 underline transition-colors duration-300"
+                  className="text-primary hover:text-primary/80 underline transition-colors duration-300"
                 >
                   UK ICO Guide
                 </a>
@@ -168,7 +166,7 @@ const PrivacyPolicyPage = () => (
                   href="https://www.allaboutcookies.org/"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-secondary hover:text-secondary/80 underline transition-colors duration-300"
+                  className="text-primary hover:text-primary/80 underline transition-colors duration-300"
                 >
                   All About Cookies
                 </a>
@@ -180,7 +178,7 @@ const PrivacyPolicyPage = () => (
                 href="https://tools.google.com/dlpage/gaoptout"
                 target="_blank"
                 rel="noreferrer"
-                className="text-secondary hover:text-secondary/80 underline transition-colors duration-300"
+                className="text-primary hover:text-primary/80 underline transition-colors duration-300"
               >
                 Google Analytics Opt-out Add-on
               </a>
@@ -189,14 +187,14 @@ const PrivacyPolicyPage = () => (
         </section>
 
         {/* Enhanced Data Sharing */}
-        <section id="data-sharing" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-800">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="data-sharing" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-800">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaShareAlt className="text-primary text-lg" />
             </div>
-            <span className="text-white">Data Sharing</span>
+            <span className="text-primary">Data Sharing</span>
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
               We only share your data with carefully selected partners, vendors,
               and third-party service providers where it is necessary. These
@@ -204,11 +202,11 @@ const PrivacyPolicyPage = () => (
             </p>
             <ul className="list-disc ml-6 space-y-2">
               <li>
-                <span className="text-secondary font-medium">Marketing Platforms:</span> CRM tools, email automation platforms,
+                <span className="text-primary font-medium">Marketing Platforms:</span> CRM tools, email automation platforms,
                 advertising networks.
               </li>
               <li>
-                <span className="text-secondary font-medium">Analytics Services:</span> Web analysis tools like Google Analytics.
+                <span className="text-primary font-medium">Analytics Services:</span> Web analysis tools like Google Analytics.
               </li>
             </ul>
             <p>
@@ -229,34 +227,34 @@ const PrivacyPolicyPage = () => (
         </section>
 
         {/* Enhanced Security */}
-        <section id="security" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-1000">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="security" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-1000">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaLock className="text-primary text-lg" />
             </div>
-            <span className="text-white">Security</span>
+            <span className="text-primary">Security</span>
           </h2>
-          <div className="text-white/90 leading-relaxed">
+          <div className="text-primary/90 leading-relaxed">
             <p>
               We prioritize the security of your Personal Information. However, no
               transmission method over the internet or method of electronic
-              storage is <span className="text-secondary font-medium">100% secure</span>. While we strive to protect your data, we
+              storage is <span className="text-primary font-medium">100% secure</span>. While we strive to protect your data, we
               cannot guarantee absolute security.
             </p>
           </div>
         </section>
 
         {/* Enhanced CCPA Rights */}
-        <section id="ccpa-rights" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-1200">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="ccpa-rights" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-1200">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaEdit className="text-primary text-lg" />
             </div>
-            <span className="text-white">Your Rights Under the California Consumer Privacy Act (CCPA)</span>
+            <span className="text-primary">Your Rights Under the California Consumer Privacy Act (CCPA)</span>
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
-              <span className="text-secondary font-medium">Codework</span> complies with the CCPA by granting you rights as a
+              <span className="text-primary font-medium">Codework</span> complies with the CCPA by granting you rights as a
               California consumer, including:
             </p>
             <ul className="list-disc ml-6 space-y-2">
@@ -275,39 +273,39 @@ const PrivacyPolicyPage = () => (
         </section>
 
         {/* Enhanced Global Rights */}
-        <section id="global-rights" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-1400">
-          <h2 className="flex items-center text-2xl font-bold mb-6 text-white">
-            <div className="w-12 h-12 bg-gradient-to-r from-secondary to-secondary/80 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
+        <section id="global-rights" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-1400">
+          <h2 className="flex items-center text-2xl font-bold mb-6 text-primary">
+            <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mr-4 shadow-lg shadow-secondary/25">
               <FaGlobe className="text-primary text-lg" />
             </div>
-            <span className="text-white">Global Data Subject Rights</span>
+            <span className="text-primary">Global Data Subject Rights</span>
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
               If you are a resident of the EEA, UK, or California, you may have
               the following rights:
             </p>
             <ul className="list-disc ml-6 space-y-2">
-              <li><span className="text-secondary font-medium">Right to Access:</span> Request data we hold about you.</li>
-              <li><span className="text-secondary font-medium">Right to Rectification:</span> Correct inaccurate data.</li>
-              <li><span className="text-secondary font-medium">Right to Deletion:</span> Request deletion of your data.</li>
-              <li><span className="text-secondary font-medium">Right to Restrict Processing:</span> Limit how your data is used.</li>
+              <li><span className="text-primary font-medium">Right to Access:</span> Request data we hold about you.</li>
+              <li><span className="text-primary font-medium">Right to Rectification:</span> Correct inaccurate data.</li>
+              <li><span className="text-primary font-medium">Right to Deletion:</span> Request deletion of your data.</li>
+              <li><span className="text-primary font-medium">Right to Restrict Processing:</span> Limit how your data is used.</li>
               <li>
-                <span className="text-secondary font-medium">Right to Data Portability:</span> Request data in a structured,
+                <span className="text-primary font-medium">Right to Data Portability:</span> Request data in a structured,
                 machine-readable format.
               </li>
               <li>
-                <span className="text-secondary font-medium">Right to Object:</span> Object to certain types of data processing.
+                <span className="text-primary font-medium">Right to Object:</span> Object to certain types of data processing.
               </li>
-              <li><span className="text-secondary font-medium">Right to Withdraw Consent:</span> Revoke previously given consent.</li>
+              <li><span className="text-primary font-medium">Right to Withdraw Consent:</span> Revoke previously given consent.</li>
               <li>
-                <span className="text-secondary font-medium">Right to Non-Discrimination:</span> You will not be penalized for
+                <span className="text-primary font-medium">Right to Non-Discrimination:</span> You will not be penalized for
                 exercising your rights.
               </li>
             </ul>
             <p>
               To exercise any of these rights, please contact our Data Protection
-              Officer at <span className="text-secondary font-medium">itsupport@codework.ai</span>. We may require identity
+              Officer at <span className="text-primary font-medium">itsupport@codework.ai</span>. We may require identity
               verification and may be restricted from fulfilling some requests due
               to legal obligations. If you are unsatisfied with how we handle your
               data, you may file a complaint with your local data protection
@@ -317,13 +315,13 @@ const PrivacyPolicyPage = () => (
         </section>
 
         {/* Enhanced Changes */}
-        <section id="changes" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-1600">
-          <h2 className="text-2xl font-bold mb-6 text-white">
+        <section id="changes" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-1600">
+          <h2 className="text-2xl font-bold mb-6 text-primary">
             Changes to This Privacy Policy
           </h2>
-          <div className="space-y-4 text-white/90 leading-relaxed">
+          <div className="space-y-4 text-primary/90 leading-relaxed">
             <p>
-              This Privacy Policy is effective as of <span className="text-secondary font-medium">April 1, 2019</span>, and remains in
+              This Privacy Policy is effective as of <span className="text-primary font-medium">April 1, 2019</span>, and remains in
               effect unless modified in future updates. Changes will become active
               immediately upon posting on this page.
             </p>
@@ -337,13 +335,13 @@ const PrivacyPolicyPage = () => (
         </section>
 
         {/* Enhanced Contact */}
-        <section id="contact" className="bg-primary/30 backdrop-blur-xl border border-white/10 p-8 rounded-3xl hover:bg-primary/40 hover:border-secondary/30 transition-all duration-500 animate-card-float animation-delay-1800">
-          <h2 className="text-2xl font-bold mb-6 text-white">Contact Us</h2>
-          <div className="text-white/90 leading-relaxed">
+        <section id="contact" className="bg-secondary/30 backdrop-blur-xl border border-primary/10 p-8 rounded-3xl hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 animate-card-float animation-delay-1800">
+          <h2 className="text-2xl font-bold mb-6 text-primary">Contact Us</h2>
+          <div className="text-primary/90 leading-relaxed">
             <p>
               If you have any questions about this Privacy Policy or wish to
               exercise your rights, please contact us at:&nbsp;
-              <span className="text-secondary font-semibold">
+              <span className="text-primary font-semibold">
                 info@codework.ai
               </span>
             </p>

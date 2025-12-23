@@ -2,15 +2,7 @@ import React from "react";
 
 const OurProduct = () => {
   return (
-    <div className="relative min-h-screen bg-secondary text-primary overflow-hidden ">
-      {/* Background Decorative Elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 md:w-40 md:h-40 bg-secondary/20 rounded-full"></div>
-        <div className="absolute top-60 right-32 w-24 h-24 md:w-32 md:h-32 bg-secondary/15 rounded-full"></div>
-        <div className="absolute bottom-40 left-1/3 w-36 h-36 md:w-48 md:h-48 bg-secondary/25 rounded-full"></div>
-        <div className="absolute top-1/3 right-1/4 w-20 h-20 md:w-24 md:h-24 bg-secondary/10 rounded-full"></div>
-      </div>
-
+    <div className="relative bg-secondary text-primary overflow-hidden ">
       {/* Floating Elements */}
       {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-32 left-16 w-2 h-2 md:w-3 md:h-3 bg-secondary rounded-full"></div>
@@ -38,7 +30,7 @@ const OurProduct = () => {
         </div> */}
 
         {/* First Row - Product Cards */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 mb-12 md:mb-16 lg:mb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 xl:gap-16 mb-10 md:mb-14 lg:mb-24">
           
           {/* Card 1 - Hyperflex AI */}
           <div className="relative group cursor-pointer overflow-hidden w-full max-w-sm bg-secondary/30 backdrop-blur-xl border border-primary/10 rounded-none hover:bg-secondary/40 hover:border-primary/30 transition-all duration-500 shadow-2xl shadow-primary/20">
