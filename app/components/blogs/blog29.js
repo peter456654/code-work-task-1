@@ -124,7 +124,7 @@ const Blog29 = () => {
           {/* FEATURE IMAGE */}
           <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
-              src="/blog/blog22.jpg"
+              src="/blog/blog18.jpg"
               alt="Software Development Lifecycle"
               fill
               className="object-cover"
@@ -141,7 +141,7 @@ const Blog29 = () => {
             <span>•</span>
             <div className="flex items-center">
               <FiClock className="mr-1 text-primary" />
-              <span>16 July 2025</span>
+              <span>27 July 2025</span>
             </div>
           </div>
 

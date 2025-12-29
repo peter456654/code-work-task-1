@@ -129,7 +129,7 @@ const Blog26 = () => {
           {/* FEATURE IMAGE */}
           <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
-              src="/blog/blog26.jpg"
+              src="https://codework-ebook.s3.amazonaws.com/codework-media/blogs/woman-uses-ai-chatbot-system-computer-guide-her-through-tasks_482257-118915.avif"
               alt="AI Consulting"
               fill
               className="object-cover"
@@ -146,7 +146,7 @@ const Blog26 = () => {
             <span>•</span>
             <div className="flex items-center">
               <FiClock className="mr-1 text-primary" />
-              <span>16 July 2025</span>
+              <span>24 July 2025</span>
             </div>
           </div>
 
