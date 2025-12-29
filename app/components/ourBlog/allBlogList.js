@@ -37,7 +37,7 @@ const blogPosts = [
     date: '2025-04-18',
     image: 'https://codework-ebook.s3.amazonaws.com/codework-media/blogs/Affordablemarketingideasforyoursmallbusiness_featuredimage.jpg',
     title: 'How Model Context Protocol Is Transforming the Future of AI',
-    description: 'In the rapidly evolving world of Artificial Intelligence (AI), new concepts are continuously emerging, bringing us closer to machines that think and respond like humans.',
+    description: ' of Artificial Intelligence (AI), new concepts are continuously emerging, bringing us closer to machines that think and respond like humans.',
     link: '/model-context-protocol',
     category: 'AI',
     readTime: '10 min read'

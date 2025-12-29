@@ -49,7 +49,7 @@ const Footer = () => {
 
   const contactLinks = [
     { href: "https://cplc.codework.ai/courses", label: "Learn with Us" },
-    { href: "/build-your-career-with-codework", label: "Our Products" },
+    { href: "/products-we-build", label: "Our Products" },
   ];
 
   const serviceLinks = [
