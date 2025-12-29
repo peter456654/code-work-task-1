@@ -89,8 +89,8 @@ const Blog31 = () => {
 
         {/* MOBILE TOC OVERLAY */}
         {isTocOpen && (
-          <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
-            <div className="bg-primary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
+          <div className="lg:hidden fixed inset-0 z-40 bg-primary/60" onClick={() => setIsTocOpen(false)}>
+            <div className="bg-secondary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
               <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
@@ -127,7 +127,7 @@ const Blog31 = () => {
           {/* FEATURE IMAGE */}
           <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
-              src="/blog/blog13.jpg"
+              src="https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/blogs/UndergroundMapping.jpg"
               alt="Underground Mapping Technology"
               fill
               className="object-cover"

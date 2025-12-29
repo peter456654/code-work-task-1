@@ -50,7 +50,7 @@ const Blog6 = () => {
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
         <div className="hidden lg:block w-64 sticky top-24 h-fit">
-          <div className="bg-secondary/60 backdrop-blur-sm rounded-xl border border-primary/20 p-6 shadow-glow">
+          <div className="bg-secondary backdrop-blur-sm rounded-xl border border-primary/60 p-6 shadow-glow">
             <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
               <FiList className="mr-2" />
               Table of Contents
@@ -121,7 +121,7 @@ const Blog6 = () => {
           {/* FEATURE IMAGE */}
           <div className="relative w-full h-[400px] border-4 border-primary border-t-0 border-l-0 rounded-lg overflow-hidden mb-8 shadow-glow">
             <Image
-              src="/blog/blog6.jpg"
+              src="https://codework-ebook.s3.amazonaws.com/codework-media/blogs/[Downloader.la]-6944e64e62c1e.jpg"
               alt="AI Practical Value"
               fill
               className="object-cover"
