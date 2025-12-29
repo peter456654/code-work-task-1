@@ -305,7 +305,7 @@ const blogPosts = [
   {
     id: 31,
     date: '2025-09-22', 
-    image: '/blog/blog3.jpg',
+    image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/blogs/UndergroundMapping.jpg',
     title: 'Underground Mapping: A Complete Guide',
     description: 'Underground mapping is the process of creating a detailed digital representation of the underground infrastructure of a city or region. This includes tunnels, tunnels, and other complex structures that are not visible to the naked eye. Underground mapping is used by a variety of industries, including construction, engineering, and the military.',
     link: '/underground-mapping',
@@ -325,7 +325,7 @@ const blogPosts = [
     {
       id: 33,
       date: '2025-10-22', 
-      image: '/blog/blog3.jpg',
+      image: 'https://codework-ebook.s3.us-east-1.amazonaws.com/codework-media/blogs/CrowdManagement.jpg',
       title: 'Crowd Management: Ensuring Safety and Order in Large Gatherings',
       description: 'Crowd management is about planning, monitoring, and guiding large groups to ensure safety, comfort, and order. It involves understanding crowd behavior, preparing for risks,',
       link: '/crowd-management',
