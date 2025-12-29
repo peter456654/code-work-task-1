@@ -140,7 +140,7 @@ const Blog2 = () => {
             <span>•</span>
             <div className="flex items-center">
               <FiClock className="mr-1 text-primary" />
-              <span>08 April 2025</span>
+              <span>10 Feb 2025</span>
             </div>
           </div>
 
