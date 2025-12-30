@@ -43,22 +43,6 @@ const AgenticAIPage = () => {
     <div className="bg-secondary min-h-screen">
       {/* Landing Section - Exactly like AiModelLanding */}
       <section className="relative w-full min-h-screen bg-secondary overflow-hidden">
-        {/* Background Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-40 h-40 bg-secondary/20 rounded-full"></div>
-          <div className="absolute top-1/3 right-24 w-24 h-24 bg-secondary/15 rounded-full"></div>
-          <div className="absolute bottom-40 left-1/3 w-48 h-48 bg-secondary/25 rounded-full"></div>
-          <div className="absolute top-2/3 right-1/3 w-32 h-32 bg-secondary/12 rounded-full"></div>
-        </div>
-
-        {/* Floating Dots */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-28 left-16 w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-          <div className="absolute top-48 right-20 w-2 h-2 bg-secondary/60 rounded-full animate-bounce"></div>
-          <div className="absolute bottom-56 left-1/4 w-3 h-3 bg-secondary/80 rounded-full animate-ping"></div>
-          <div className="absolute top-3/4 right-4 w-1 h-1 bg-secondary/40 rounded-full animate-pulse"></div>
-        </div>
-
         {/* Main Content Container */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 pt-40">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-start">
@@ -67,6 +51,9 @@ const AgenticAIPage = () => {
             <div className="lg:col-span-2 text-left">
 
               <div className="heading-container mb-8">
+                <div className="inline-flex items-center px-4 py-2  bg-secondary/10 text-primary text-sm font-medium mb-4">
+                   Agentic AI 
+                </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-6">
                   Empower Your Business with <span className="text-primary">Agentic AI</span>
                 </h1>

@@ -21,9 +21,9 @@ const HomeClient = () => {
     <div className="min-h-screen bg-secondary text-primary py-16 px-4">
       {/* Header */}
       <div className="text-center mb-16">
-        <h1 className="text-5xl md:text-6xl font-bold text-primary">
-          CODEWORK AI Customers
-        </h1>
+        <h2 className="text-5xl md:text-6xl font-bold text-primary">
+          Codework AI Customers
+        </h2>
       </div>
 
       {/* Logo Grid */}

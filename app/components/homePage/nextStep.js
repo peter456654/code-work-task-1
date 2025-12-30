@@ -26,9 +26,9 @@ const NextStep = () => {
     <div className="bg-secondary text-primary pt-14 pb-6 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-10 text-primary">
+        <h2 className="text-4xl md:text-5xl font-bold mb-10 text-primary">
           Take the next step
-        </h1>
+        </h2>
 
         {/* CTA Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

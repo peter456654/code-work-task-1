@@ -50,7 +50,7 @@ const SoftwareServices = () => {
     <div className=" bg-secondary text-primary">
       {/* Header */}
       <div className="text-center  pb-12">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 text-primary">AI Powered solution</h1>
+        <h2 className="text-5xl md:text-6xl font-bold mb-4 text-primary">AI powered solution</h2>
       </div>
 
       {/* Navigation Tabs */}

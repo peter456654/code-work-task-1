@@ -46,9 +46,9 @@ const WeekResult = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Left Side - Title */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
               Proven results in weeks,<br />not years
-            </h1>
+            </h2>
           </div>
 
           {/* Right Side - Image and Description (shows active phase) */}
