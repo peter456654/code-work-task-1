@@ -56,29 +56,30 @@ const Blog3 = () => {
     <div className="bg-secondary py-12 pt-40 min-h-screen">
       <div className="max-w-screen-xl mx-auto px-4 flex gap-8">
         {/* LEFT SIDEBAR - TABLE OF CONTENTS */}
-        <div className="hidden lg:block w-64 sticky top-24 h-fit">
-          <div className="bg-secondary backdrop-blur-sm rounded-xl border border-primary/60 p-6 shadow-glow">
-            <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
-              <FiList className="mr-2" />
-              Table of Contents
-            </h3>
-            <nav className="space-y-2">
-              {tocItems.map((item, index) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
-                    activeSection === item.id
-                      ? "bg-secondary/20 text-primary border-l-4 border-primary"
-                      : "text-primary/70 hover:text-primary hover:bg-secondary/5"
-                  }`}
-                >
-                  {index + 1}. {item.title}
-                </button>
-              ))}
-            </nav>
-          </div>
-        </div>
+        <div className="hidden lg:block w-64 sticky top-24">
+  <div className="bg-secondary backdrop-blur-sm rounded-xl border border-primary/60 p-6 shadow-glow max-h-[calc(100vh-8rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
+    <h3 className="text-lg font-bold text-primary mb-4 flex items-center sticky top-0 bg-secondary z-10 -mx-6 -mt-6 px-6 pt-6 pb-3">
+      <FiList className="mr-2" />
+      Table of Contents
+    </h3>
+    <nav className="space-y-2">
+      {tocItems.map((item, index) => (
+        <button
+          key={item.id}
+          onClick={() => scrollToSection(item.id)}
+          className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+            activeSection === item.id
+              ? "bg-secondary/20 text-primary border-l-4 border-primary"
+              : "text-primary/70 hover:text-primary hover:bg-secondary/5"
+          }`}
+        >
+          {index + 1}. {item.title}
+        </button>
+      ))}
+    </nav>
+  </div>
+</div>
+
 
         {/* MOBILE TOC TOGGLE */}
         <button
@@ -152,7 +153,7 @@ const Blog3 = () => {
           {/* INTRO */}
           <section id="intro" className="scroll-mt-24">
             <p className="text-primary/80 text-xl leading-relaxed mb-10">
-              This blog will explore <strong className="text-secondary">WorkManager, AlarmManager, and JobScheduler</strong> in detail, comparing their functionality, ideal use cases, and examples.
+              This blog will explore <strong className="text-primary">WorkManager, AlarmManager, and JobScheduler</strong> in detail, comparing their functionality, ideal use cases, and examples.
             </p>
           </section>
 

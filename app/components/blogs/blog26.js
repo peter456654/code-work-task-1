@@ -17,9 +17,9 @@ const Blog26 = () => {
     { id: "new-ai-product-development", title: "New AI Product Development" },
     { id: "integrating-ai-into-existing-products", title: "Integrating AI into Existing Products" },
     { id: "problem-solving-approach", title: "Our Problem-Solving Approach" },
-    { id: "ai-consulting-for-businesses", title: "AI Consulting for Businesses" },
-    { id: "technology-consulting", title: "Technology Consulting" },
-    { id: "ai-integration-support", title: "AI Integration Support" },
+    //{ id: "ai-consulting-for-businesses", title: "AI Consulting for Businesses" },
+    //{ id: "technology-consulting", title: "Technology Consulting" },
+    //{ id: "ai-integration-support", title: "AI Integration Support" },
     { id: "ui-ux-design-excellence", title: "UI/UX Design Excellence" },
     { id: "conclusion", title: "Conclusion" },
   ];

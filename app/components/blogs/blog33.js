@@ -13,19 +13,19 @@ const Blog33 = () => {
   const tocItems = [
     { id: "tldr", title: "TL;DR" },
     { id: "what-is", title: "What Is Crowd Management?" },
-    { id: "where-used", title: "Where Is Crowd Management Used?" },
-    { id: "who-uses", title: "Who Uses Crowd Management?" },
+    //{ id: "where-used", title: "Where Is Crowd Management Used?" },
+    //{ id: "who-uses", title: "Who Uses Crowd Management?" },
     { id: "context", title: "Context of Crowd Management" },
-    { id: "vs-event-risk", title: "Crowd Management vs Event Risk Management" },
-    { id: "vs-crowd-control", title: "Crowd Management vs Crowd Control" },
+    //{ id: "vs-event-risk", title: "Crowd Management vs Event Risk Management" },
+    //{ id: "vs-crowd-control", title: "Crowd Management vs Crowd Control" },
     { id: "measures", title: "Measures of Crowd Management" },
-    { id: "crowd-manager", title: "The Crowd Manager" },
+    //{ id: "crowd-manager", title: "The Crowd Manager" },
     { id: "management-plan", title: "The Crowd Management Plan" },
-    { id: "evacuation-simulation", title: "Evacuation Simulation" },
+    //{ id: "evacuation-simulation", title: "Evacuation Simulation" },
     { id: "crowd-analysis", title: "Crowd Analysis and Monitoring" },
     { id: "crowd-estimation", title: "Crowd Estimation" },
     { id: "crowd-disasters", title: "Crowd Disasters" },
-    { id: "conclusion", title: "Conclusion" },
+    //{ id: "conclusion", title: "Conclusion" },
   ];
 
   // Smooth scroll to section

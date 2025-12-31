@@ -13,16 +13,16 @@ const Blog32 = () => {
   const tocItems = [
     { id: "tldr", title: "TL;DR" },
     { id: "what-is", title: "What Is Computer Vision?" },
-    { id: "how-works", title: "How Computer Vision Works" },
+    //{ id: "how-works", title: "How Computer Vision Works" },
     { id: "data-collection", title: "Data Collection" },
     { id: "preprocessing", title: "Preprocessing" },
     { id: "model-selection", title: "Model Selection" },
     { id: "model-training", title: "Model Training" },
-    { id: "cv-tasks", title: "Computer Vision Tasks" },
+    //{ id: "cv-tasks", title: "Computer Vision Tasks" },
     { id: "applications", title: "Computer Vision Applications" },
     { id: "tools", title: "Computer Vision Tools" },
-    { id: "history", title: "A Brief History" },
-    { id: "conclusion", title: "Conclusion" },
+    //{ id: "history", title: "A Brief History" },
+    //{ id: "conclusion", title: "Conclusion" },
   ];
 
   // Smooth scroll to section

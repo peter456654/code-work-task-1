@@ -49,7 +49,7 @@ const HyperflexaiLanding = () => {
 
               {/* Enhanced Heading with Gradient Text */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-5xl font-bold mb-3 sm:mb-4 lg:mb-4 xl:mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-secondary via-primary-400 to-secondary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-primary-400 to-secondary bg-clip-text text-transparent">
                   AI-Powered
                 </span>{" "}
                 Search Engine for{" "}

@@ -86,7 +86,7 @@ const Blog1 = () => {
         {isTocOpen && (
           <div className="lg:hidden fixed inset-0 z-40 bg-secondary/50" onClick={() => setIsTocOpen(false)}>
             <div className="bg-secondary w-80 h-full overflow-y-auto p-6 shadow-xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold text-secondary mb-4 flex items-center">
+              <h3 className="text-lg font-bold text-primary mb-4 flex items-center">
                 <FiList className="mr-2" />
                 Table of Contents
               </h3>
@@ -180,7 +180,7 @@ const Blog1 = () => {
             <h2 className="text-2xl font-bold text-primary mb-4">Standard Launch Mode</h2>
             <div className="bg-secondary/80 rounded-lg p-6 mb-10 border border-primary/40 shadow-glow">
               <p className="text-primary/90 leading-relaxed mb-3">
-                <strong className="text-secondary">Standard Launch Mode (Default)</strong><br />
+                <strong className="text-primary">Standard Launch Mode (Default)</strong><br />
                 Every time you launch an activity, a new instance of the activity is created and pushed onto the activity stack.
               </p>
               <p className="text-primary/80 mb-2">
@@ -200,7 +200,7 @@ const Blog1 = () => {
             <h2 className="text-2xl font-bold text-primary mb-4">SingleTop Launch Mode</h2>
             <div className="bg-secondary/80 rounded-lg p-6 mb-10 border border-primary/40 shadow-glow">
               <p className="text-primary/90 mb-3">
-                <strong className="text-secondary">SingleTop</strong> mode lets an activity reuse itself if it's already on top of the stack, otherwise creates a new instance.
+                <strong className="text-primary">SingleTop</strong> mode lets an activity reuse itself if it's already on top of the stack, otherwise creates a new instance.
               </p>
               <p className="text-primary/80 mb-4">
                 <span className="font-semibold">Behavior:</span> If the activity is already at the top of the stack, <code>onNewIntent()</code> is called instead of creating a new instance.
@@ -217,7 +217,7 @@ const Blog1 = () => {
             <h2 className="text-2xl font-bold text-primary mb-4">SingleTask Launch Mode</h2>
             <div className="bg-secondary/80 rounded-lg p-6 mb-10 border border-primary/40 shadow-glow">
               <p className="text-primary/90 mb-3">
-                <strong className="text-secondary">SingleTask</strong> ensures only one instance of the activity exists in the task stack.
+                <strong className="text-primary">SingleTask</strong> ensures only one instance of the activity exists in the task stack.
               </p>
               <p className="text-primary/80 mb-4">
                 <span className="font-semibold">Behavior:</span> If the activity exists anywhere in the stack, all activities above it are destroyed, and <code>onNewIntent()</code> is called.
@@ -230,7 +230,7 @@ const Blog1 = () => {
             <h2 className="text-2xl font-bold text-primary mb-4">SingleInstance Launch Mode</h2>
             <div className="bg-secondary/80 rounded-lg p-6 mb-10 border border-primary/40 shadow-glow">
               <p className="text-primary/90 mb-3">
-                <strong className="text-secondary">SingleInstance</strong> creates the activity in a separate task and ensures it's the only activity in that task.
+                <strong className="text-primary">SingleInstance</strong> creates the activity in a separate task and ensures it's the only activity in that task.
               </p>
               <p className="text-primary/80 mb-4">
                 <span className="font-semibold">Behavior:</span> The activity runs in its own task, isolated from other activities.

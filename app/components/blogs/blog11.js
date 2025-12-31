@@ -181,7 +181,7 @@ const Blog11 = () => {
               Leveraged by Artificial Intelligence, companies can now analyze enormous datasets to provide tailored emails, product recommendations, and even custom websites.
             </p>
             <ul className="list-disc ml-6 text-primary/80 mb-10 space-y-1">
-              <li><strong>Enhanced Targeting:</strong> Thanks to <Link href="/machine-learning" className="text-secondary hover:underline font-medium"> machine learning</Link>, advertisers can group audiences into micro-segments using interests, behaviors, and intent, resulting in far more cost-efficient advertising.</li>
+              <li><strong>Enhanced Targeting:</strong> Thanks to <Link href="/machine-learning" className="text-primary hover:underline font-medium"> machine learning</Link>, advertisers can group audiences into micro-segments using interests, behaviors, and intent, resulting in far more cost-efficient advertising.</li>
               <li><strong>Improved Decision-Making:</strong> With AI dashboards, marketers can monitor real-time metrics like click-through rates, conversions, and even bounce rates, allowing them to make strategic instant shifts.</li>
               <li><strong>Scalability:</strong> Managing 10 or even 100 campaigns, AI technologies require little to no human involvement in large-scale marketing operations.</li>
             </ul>
@@ -201,7 +201,7 @@ const Blog11 = () => {
           <section id="popular-ai-tools" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-white mb-4">Popular AI Tools for Digital Marketers</h2>
             <div className="overflow-x-auto mb-10">
-              <table className="min-w-full bg-secondary border border-primary/30 rounded-lg">
+              <table className="min-w-full bg-secondary border border-primary/30 rounded-lg ">
                 <thead>
                   <tr>
                     <th className="py-3 px-4 text-left text-primary font-semibold border-b border-primary/20">Tool</th>
@@ -222,7 +222,7 @@ const Blog11 = () => {
                     ["SEMrush", "All-in-one SEO & PPC toolkit", "AI-driven content audits, rank tracking, and gap analysis"],
                     ["Screaming Frog", "Website crawling & SEO audits", "AI-enabled crawl insights and on-site SEO fixes"],
                   ].map(([tool, purpose, highlight]) => (
-                    <tr key={tool} className="border-b border-secondary/10">
+                    <tr key={tool} className="border-b border-primary/20">
                       <td className="py-3 px-4 text-primary">{tool}</td>
                       <td className="py-3 px-4 text-primary/80">{purpose}</td>
                       <td className="py-3 px-4 text-primary/80">{highlight}</td>

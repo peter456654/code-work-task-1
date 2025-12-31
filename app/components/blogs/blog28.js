@@ -153,7 +153,7 @@ const Blog28 = () => {
             <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-6 mb-10">
               <div className="flex items-center mb-4">
                 <FiShield className="text-secondary mr-3" size={24} />
-                <h2 className="text-xl font-bold text-secondary">Advanced AI Protection</h2>
+                <h2 className="text-xl font-bold text-primary">Advanced AI Protection</h2>
               </div>
               <p className="text-white/80 leading-relaxed">
                 Transform your cybersecurity posture with intelligent, adaptive defense systems powered by cutting-edge AI technology.

@@ -13,12 +13,12 @@ const Blog10 = () => {
     { id: "introduction", title: "Introduction" },
     { id: "need-automation", title: "The Need for Automation in Recruitment" },
     { id: "how-codework-leverages-ai", title: "How CODEWORK Leverages AI to Streamline Hiring" },
-    { id: "key-features", title: "Key Features of CODEWORK's AI Recruitment Platform" },
+    //{ id: "key-features", title: "Key Features of CODEWORK's AI Recruitment Platform" },
     { id: "resume-screening", title: "Intelligent Resume Screening" },
-    { id: "candidate-ranking", title: "Automated Candidate Ranking" },
+    //{ id: "candidate-ranking", title: "Automated Candidate Ranking" },
     { id: "ai-chatbots", title: "AI-Driven Chatbots" },
     { id: "data-backed-decisions", title: "Data-Backed Hiring Decisions" },
-    { id: "benefits", title: "Benefits for Businesses and HR Teams" },
+    //{ id: "benefits", title: "Benefits for Businesses and HR Teams" },
     { id: "future-recruitment", title: "Future of Recruitment with CODEWORK" },
   ];
 
@@ -250,7 +250,7 @@ const Blog10 = () => {
               Ready to revolutionize your recruitment process?{" "}
               <a
                 href="https://codework.ai/contact-ai-solutions"
-                className="text-secondary hover:underline font-semibold"
+                className="text-primary hover:underline font-semibold"
               >
                 Contact the CODEWORK team
               </a>{" "}

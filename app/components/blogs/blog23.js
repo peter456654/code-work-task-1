@@ -13,9 +13,9 @@ const Blog23 = () => {
   const tocItems = [
     { id: "what-is-artificial-intelligence", title: "What Is Artificial Intelligence?" },
     { id: "machine-learning", title: "Machine Learning: The Core of AI" },
-    { id: "deep-learning", title: "Deep Learning: Mimicking the Brain" },
+    //{ id: "deep-learning", title: "Deep Learning: Mimicking the Brain" },
     { id: "generative-ai", title: "Generative AI: Creating with Intelligence" },
-    { id: "ai-agents", title: "AI Agents and Agentic AI" },
+    //{ id: "ai-agents", title: "AI Agents and Agentic AI" },
     { id: "benefits-of-artificial-intelligence", title: "Benefits of Artificial Intelligence" },
     { id: "real-world-applications", title: "Real-World Applications of AI" },
     { id: "challenges", title: "Challenges and Risks in AI" },

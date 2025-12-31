@@ -196,7 +196,7 @@ export default function Education() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-secondary mb-4">Benefits of AI in Education</h3>
+              <h3 className="text-2xl font-bold text-binary mb-4">Benefits of AI in Education</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">

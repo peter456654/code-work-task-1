@@ -19,8 +19,8 @@ const Blog15 = () => {
     { id: "reallife-applications", title: "Real-Life Applications of Machine Learning" },
     { id: "common-challenges", title: "Common Machine Learning Challenges to Overcome" },
     { id: "selecting-the-best-platform", title: "How to Select the Best AI Platform" },
-    { id: "conclusion", title: "Conclusion" },
-    { id: "explore", title: "Explore More" },
+    //{ id: "conclusion", title: "Conclusion" },
+    //{ id: "explore", title: "Explore More" },
   ];
 
   // Smooth scroll to section
